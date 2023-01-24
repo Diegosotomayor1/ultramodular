@@ -1,8 +1,13 @@
 import React from 'react'
-
+import { motion } from 'framer-motion'
 const Formulario = () => {
   return (
-    <div className='bg-[rgba(0,0,0,0.5)] hidden md:flex flex-col p-8 px-10 '>
+    <motion.div
+      className='bg-[rgba(0,0,0,0.5)] hidden md:flex flex-col p-8 px-10 '
+      initial={{ opacity: 0, translateX: 100 }}
+      animate={{ opacity: 1, translateX: 0 }}
+      transition={{ duration: 1 }}
+    >
       <h3 className=' font-normal text-3xl text-greenmodular mb-2'>
         Contáctanos
       </h3>
@@ -34,7 +39,7 @@ const Formulario = () => {
       >
         Enviar
       </button>
-    </div>
+    </motion.div>
   )
 }
 

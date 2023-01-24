@@ -3,7 +3,7 @@ import LayoutInner from '../components/templates/LayoutInner'
 import Caracteristicas from './Caracteristicas'
 const Nosotros = () => {
   return (
-    <div className='relative flex items-center min-h-screen'>
+    <div className='relative flex items-center min-h-screen' id='nosotros'>
       <img
         src='plano.png'
         alt=''

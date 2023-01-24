@@ -9,7 +9,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/zoom'
 
-const Servicios = () => {
+const Servicios = ({ setInfoRecolected }) => {
   const servicios = [
     {
       title: 'Módulos y stands comerciales',
@@ -34,7 +34,7 @@ const Servicios = () => {
   ]
   return (
     <LayoutInner>
-      <div className='h-screen w-full '>
+      <div className='h-screen w-full' id='servicios'>
         <HeadSection title='Servicios' />
         <div className='w-5/6 mx-auto mt-36 flex md:flex-row items-center justify-center gap-8'>
           <Swiper
@@ -48,6 +48,7 @@ const Servicios = () => {
             {servicios.map(servicio => (
               <SwiperSlide key={servicio.title}>
                 <Servicio
+                  setInfoRecolected={setInfoRecolected}
                   title={servicio.title}
                   img={servicio.img}
                   descripcion={servicio.descripcion}
