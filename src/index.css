@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'LemonMilk';
+    font-weight: 400;
+    src: url('./assets/lemon_milk/LEMONMILK-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LemonMilk';
+    font-weight: 500;
+    src: url('./assets/lemon_milk/LEMONMILK-Medium.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LemonMilk';
+    font-weight: 200;
+    src: url('./assets/lemon_milk/LEMONMILK-Light.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LemonMilk';
+    font-weight: 700;
+    src: url('./assets/lemon_milk/LEMONMILK-Bold.otf') format('truetype');
+}
+
+html {
+    font-family: "LemonMilk";
+}
+
+#portada {
+    background-image: url("portada-01.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.headsection::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 50px solid #0a0a0a;
+    border-top: 0px solid transparent;
+    border-bottom: 40px solid transparent;
+    transform: translateX(50px);
+}
+
+.swiper-wrapper {
+    padding-bottom: 60px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #60D300;
+    border-radius: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    top: calc(100% - 35px);
+    margin-top: 0 !important;
+    width: 30px;
+    height: 30px;
+    color: black;
+    background: #60D300;
+}
+
+.swiper-button-prev::after {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.swiper-button-next::after {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: 50% !important;
+    left: 25% !important;
+}
