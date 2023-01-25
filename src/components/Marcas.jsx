@@ -28,7 +28,7 @@ const Marcas = () => {
         >
           {marcas.map(marca => (
             <SwiperSlide key={marca}>
-              <img src={marca} alt='' className='w-[300px] bg-contain' />
+              <img src={marca} alt='' className='w-[300px] bg-contain mx-auto' />
             </SwiperSlide>
           ))}
         </Swiper>

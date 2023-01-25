@@ -36,8 +36,8 @@ const Header = () => {
           <a href='/' className='flex items-center'>
             <img
               src='logo.png'
-              className='h-6 mr-3 sm:h-9'
-              alt='Flowbite Logo'
+              className=' w-32 mr-3'
+              alt='Logo Ultramodular'
             />
           </a>
           <button

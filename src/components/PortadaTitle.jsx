@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
@@ -22,7 +21,7 @@ const PortadaTitle = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}
       >
-        <Link to='#proyectos'>Ver proyectos </Link>
+        <a href='#proyectos'>Ver proyectos </a>
         <FontAwesomeIcon icon={faArrowRight} />
       </motion.div>
     </motion.div>
