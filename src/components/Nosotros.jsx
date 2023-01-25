@@ -1,6 +1,7 @@
 import HeadSection from '../components/HeadSection'
 import LayoutInner from '../components/templates/LayoutInner'
 import Caracteristicas from './Caracteristicas'
+import { motion } from 'framer-motion'
 const Nosotros = () => {
   return (
     <div className='relative flex items-center min-h-screen' id='nosotros'>
@@ -11,7 +12,12 @@ const Nosotros = () => {
       />
       <HeadSection title='Nosotros' />
       <LayoutInner>
-        <div className='flex flex-col gap-6 md:w-1/3 mt-20 p-5'>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className='flex flex-col gap-6 md:w-1/3 mt-20 p-5'
+        >
           <h5 className='text-greenmodular text-lg'>Nosotros</h5>
           <h2 className='text-3xl '>Arquitectura creativa y modular</h2>
           <p className='text-xs font-thin  leading-8'>
@@ -29,7 +35,7 @@ const Nosotros = () => {
               de experiencia
             </h5>
           </div>
-        </div>
+        </motion.div>
         <div className='md:w-1/3 md:mt-20 p-5'>
           <Caracteristicas />
         </div>

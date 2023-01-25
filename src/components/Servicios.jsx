@@ -8,7 +8,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/zoom'
-
+import { motion } from 'framer-motion'
 const Servicios = ({ setInfoRecolected }) => {
   const servicios = [
     {
@@ -34,9 +34,17 @@ const Servicios = ({ setInfoRecolected }) => {
   ]
   return (
     <LayoutInner>
-      <div className='h-screen w-full' id='servicios'>
+      <div
+        className='h-screen w-full'
+        id='servicios'
+      >
         <HeadSection title='Servicios' />
-        <div className='w-5/6 mx-auto mt-36 flex md:flex-row items-center justify-center gap-8'>
+        <motion.div
+          initial={{ opacity: 0, translateY: 300 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 0.5 }}
+          className='w-5/6 mx-auto mt-36 flex md:flex-row items-center justify-center gap-8'
+        >
           <Swiper
             navigation
             zoom
@@ -56,7 +64,7 @@ const Servicios = ({ setInfoRecolected }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
       </div>
     </LayoutInner>
   )

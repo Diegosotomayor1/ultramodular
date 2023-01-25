@@ -29,7 +29,7 @@ const Caracteristicas = () => {
     }
   ]
   return (
-    <div className='grid grid-cols-2'>
+    <div className='grid grid-cols-2 gap-8'>
       {caracteristicas.map(caracteristica => (
         <Caracteristica
           key={caracteristica.nombre}

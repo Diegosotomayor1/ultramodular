@@ -4,7 +4,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import HeadSection from './HeadSection'
 import Proyecto from './Proyecto'
-
+import { motion } from 'framer-motion'
 const Proyectos = ({ setInfoRecolected }) => {
   const proyectos = [
     {
@@ -56,8 +56,17 @@ const Proyectos = ({ setInfoRecolected }) => {
       </div>
       <div className='relative h-[300px]'>
         <HeadSection title='Nuevo' />
-        <div className=' flex items-center justify-center pt-56'>
-          <button className='relative flex flex-row gap-4 items-center justify-center bg-greenmodular text-black px-10 py-2 transition-transform hover:scale-125'>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className=' flex items-center justify-center pt-56'
+        >
+          <a
+            target='_blank'
+            href='https://www.facebook.com/ultramodularperu'
+            className='relative flex flex-row gap-4 items-center justify-center bg-greenmodular text-black px-10 py-2 transition-transform duration-300 hover:scale-110' rel='noreferrer'
+          >
             <span className='absolute rounded-2xl text-white text-xs -top-2 -right-5 p-2 bg-red-600 '>
               Nuevo
             </span>
@@ -66,8 +75,8 @@ const Proyectos = ({ setInfoRecolected }) => {
               className='text-blue-600 fa-2x'
             />
             &nbsp; Ver nuevos proyectos
-          </button>
-        </div>
+          </a>
+        </motion.div>
       </div>
     </div>
   )
